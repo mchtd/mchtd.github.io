@@ -4,6 +4,13 @@
 
     <a class="site-title" href="{{ "/index2.html" | prepend: site.baseurl }}">{{ site.title }}</a>
 
+    {% if page.autor %}
+    <a class="site-title" href="">/{{ page.autor | escape }}</a>
+    {% endif %}
+    {% if page.title %}
+    <a class="site-title" href="{{ page.url | prepend: site.baseurl }}">/{{ page.title | escape }}</a>
+    {% endif %}
+
     <nav class="site-nav">
       <a href="#" class="menu-icon">
         <svg viewBox="0 0 18 15">
